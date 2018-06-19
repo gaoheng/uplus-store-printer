@@ -41,7 +41,7 @@ public class PrintController {
     public Result printReceipt(@RequestBody Printer.Receipt receipt) {
 
         try {
-            printer.printRepceipt(receipt);
+            printer.printReceipt(receipt);
         } catch (Throwable t) {
             log.error("Error when printing receipt.", t);
         }
@@ -57,8 +57,9 @@ public class PrintController {
     public static class Item implements Serializable {
         private String code;
         private String name;
-        private BigDecimal price;
-        private BigDecimal quantity;
+        private String price;
+        private String quantity;
+        private String cost;
     }
 
     @Data
