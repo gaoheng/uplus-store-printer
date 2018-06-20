@@ -42,7 +42,7 @@ public class Printer {
         String color = "颜色：" + label.getColor();
         String size = "尺码：" + label.getSize();
         cmds.add("TEXT " + x + "," + y + ",\"TSS24.BF2\",0,1,1,\"" + color + "\"");
-        cmds.add("TEXT " + mmToDot(25) + "," + y + ",\"TSS24.BF2\",0,1,1,\"￥9999.99\"");
+        cmds.add("TEXT " + mmToDot(25) + "," + y + ",\"TSS24.BF2\",0,1,1,\"￥" + label.getPrice() + "\"");
         y = y + height + gap;
         cmds.add("TEXT " + x + "," + y + ",\"TSS24.BF2\",0,1,1,\"" + size + "\"");
 
@@ -81,7 +81,7 @@ public class Printer {
     public static class Label implements Serializable {
         private String code;
         private String name;
-        private BigDecimal price;
+        private String price;
         private String color;
         private String size;
     }
