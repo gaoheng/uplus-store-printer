@@ -93,7 +93,6 @@ public class Printer {
         private BigDecimal total;
         private BigDecimal discount;
         private BigDecimal paid;
-        private Date orderTime;
 
         List<PrintController.Item> items;
     }

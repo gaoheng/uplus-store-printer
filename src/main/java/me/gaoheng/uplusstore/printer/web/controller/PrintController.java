@@ -55,11 +55,11 @@ public class PrintController {
 
     @Data
     public static class Item implements Serializable {
-        private String code;
-        private String name;
-        private String price;
+        private String skuCode;
+        private String skuName;
+        private String skuPrice;
         private String quantity;
-        private String cost;
+        private String total;
     }
 
     @Data

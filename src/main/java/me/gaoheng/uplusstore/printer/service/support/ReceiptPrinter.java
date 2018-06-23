@@ -52,7 +52,7 @@ public class ReceiptPrinter {
 
     private void printItems(List<PrintController.Item> items) {
         items.forEach(item -> {
-            printItem(item.getName(), item.getCode(), item.getPrice(), item.getQuantity(), item.getCost());
+            printItem(item.getSkuName(), item.getSkuCode(), item.getSkuPrice(), item.getQuantity(), item.getTotal());
         });
     }
 

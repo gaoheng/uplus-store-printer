@@ -9,7 +9,7 @@ public class LabelPrinter {
 
     private void init() {
         System.setProperty("jna.encoding", "GBK");
-        String printerName = "Gprinter  GP-3120TU";
+        String printerName = "ZH308I(标签)";//Gprinter  GP-3120TU
         TscLibDll.INSTANCE.openport(printerName);
         TscLibDll.INSTANCE.setup("40", "30", "5", "8", "0", "2", "0");
         TscLibDll.INSTANCE.sendcommand("SET CUTTER BATCH");
